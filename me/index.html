@@ -108,6 +108,14 @@
     	-moz-box-shadow: 0 0 8px rgba(255,255,255,0.8);
     	box-shadow: 0 0 8px rgba(255,255,255,0.8);
     }
+    #options .error {
+    	clear: both;
+    	color: #f00;
+    	display: inline-block;
+    	margin-top: 1em;
+    	text-align: center;
+    	width: 19em;
+    }
     .button {
       background: rgb(0,0,0);
       background: rgba(255,255,255,0.2);
@@ -267,6 +275,15 @@
             output[element.id] = element.value;
           })
           $.bbq.pushState(output);
+
+          var errorContainer = $('.error'),
+              usedFields = $('form input[type=text][value!=""]');
+          if ( usedFields.length === 0 ) {
+          	errorContainer.html('Error : you must fill at least one field');
+          } else {
+          	errorContainer.empty();
+          }
+
           return false;
         })
       }
@@ -287,7 +304,7 @@
           }
         }
         form += '<input type="submit" class="button" value="Create" />'
-             + "</form>";
+             + '</form><p class="error"></p>';
 
         $options.html(form);
       }
