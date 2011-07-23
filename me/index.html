@@ -282,6 +282,7 @@
           	errorContainer.html('Error : you must fill at least one field');
           } else {
           	errorContainer.empty();
+          	$('html,body').animate( {scrollTop:0} );
           }
 
           return false;
