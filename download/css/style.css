@@ -1,7 +1,7 @@
 * {margin: 0; padding: 0; }
 body {
-  background: url(../img/bg-content.png) repeat top left #000000;
-  color: #aaaaaa;
+  background: url(../img/bg-content.png) repeat top left #000;
+  color: #aaa;
   font: 62.5%/1 "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 .clear {
@@ -10,16 +10,15 @@ body {
 form {
   width: 470px;
   margin: 40px auto;
-  /* font-size: 1.4em; */
 }
 fieldset {
 	padding: 1em;
-	border : 1px solid #ccc;
-	background-color: #000000
+	border: 1px solid #ccc;
+	background-color: #000;
 }
 legend {
 	font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 form div {
   position: relative;
@@ -36,15 +35,9 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 #button-bar {
-  /* text-align: center; */
-  /* padding-top: 15px;
-  padding-bottom: 20px; 
-  margin: 0; */
   margin-top: 10px;
 }
 #button {
-  /* margin: 0 0 0 120px;
-  display: none; */
   padding: 5px 5px 8px;
   margin-right: 10px;
 }
@@ -57,10 +50,8 @@ input[type="checkbox"] {
   position: fixed; /*was relative*/
   width: 25%;
   right: 0;
-  /*width: 100%;
-  left: 0;*/
   top: 0;
-  z-index: 100000;
+  z-index: 10;
 }
 #jquery-notifications p {
   text-align: center;
@@ -75,15 +66,15 @@ input[type="checkbox"] {
   position: absolute;
   right: 10px;
   margin-right: 10px;
-  color: black;
+  color: #000;
   text-decoration: none;
-  border: 1px solid black;
+  border: 1px solid #000;
   padding-right: 5px;
   padding-left: 5px;
 }
 #jquery-notifications .notice {
   background: #6c9ffc;
-  color: #ffffff; /*#061a72;*/
+  color: #fff;
   border-color: #061a72;
   opacity: 0.9;
 }
