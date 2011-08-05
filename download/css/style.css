@@ -18,17 +18,18 @@ body {
   background-color: #282828;
   background-size: 16px 16px;
   color: #aaa;
-  font: 62.5%/1 "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+  font: 16px/100% "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 .clear {
   clear: both;
 }
 form {
-  width: 470px;
+  width: 595px;
   margin: 40px auto;
 }
 fieldset {
 	padding: 1em;
+	padding-right: 0;
 	border: 1px solid #ccc;
 	background-color: #000;
 }
@@ -43,7 +44,7 @@ form div {
 	clear: both;
 }
 .col {
-  width: 11em;
+  width: 9em;
 	float: left;
 	clear: none;
 }
