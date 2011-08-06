@@ -4,7 +4,8 @@ var
       enable: function() { this.removeAttr('disabled'); return this; },
       disable: function() { this.attr('disabled', 'disabled'); return this; }
     }).disable(),
-    download: undefined // It's defined later in buildUI()
+    download: undefined, // It's defined later in buildUI(),
+    reset: $('#reset')
   },
   checkboxes,
   builtScript = ''
@@ -77,6 +78,10 @@ function buildUI(services) {
     .disable()
     .click(function (e) { e.preventDefault(); build(); })
   ;
+
+  buttons.reset.click( function(e) {
+    onDownloadComplete();
+  });
 
   // 'Build Script' button must be enabled only
   // if there is >= 1 services selected

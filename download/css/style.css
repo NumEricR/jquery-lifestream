@@ -51,7 +51,8 @@ form div {
 label {
   text-transform: capitalize;
 }
-input[type="checkbox"] {
+input[type="checkbox"],
+#reset {
   margin-right: 10px;
 }
 #button-bar {
@@ -60,15 +61,16 @@ input[type="checkbox"] {
 #button-bar p {
   text-align: center;
 }
-#build {
-  padding: 9px 10px;
-  text-transform: uppercase;
-}
 #download {
   display: none;
 }
+#build, #reset,
 #download object {
   vertical-align: middle;
+}
+#build, #reset {
+  padding: 8px 10px 9px;
+  text-transform: uppercase;
 }
 
 /* jQuery Notifications plugin - http://programmingmind.com */
