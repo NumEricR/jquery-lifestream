@@ -24,18 +24,18 @@ body {
   clear: both;
 }
 form {
-  width: 595px;
+  width: 610px;
   margin: 40px auto;
 }
 fieldset {
 	padding: 1em;
-	padding-right: 0;
 	border: 1px solid #ccc;
 	background-color: #000;
 }
 legend {
 	font-weight: bold;
   color: #fff;
+  padding: 0 5px;
 }
 form div {
   position: relative;
@@ -47,6 +47,9 @@ form div {
   width: 9em;
 	float: left;
 	clear: none;
+}
+label {
+  text-transform: capitalize;
 }
 input[type="checkbox"] {
   margin-right: 10px;
