@@ -57,13 +57,20 @@ input[type="checkbox"] {
 #button-bar {
   margin-top: 10px;
 }
-#button {
-  padding: 5px 5px 8px;
-  margin-right: 10px;
+#button-bar p {
+  text-align: center;
 }
-#button-bar > object {
+#build {
+  padding: 9px 10px;
+  text-transform: uppercase;
+}
+#download {
+  display: none;
+}
+#download object {
   vertical-align: middle;
 }
+
 /* jQuery Notifications plugin - http://programmingmind.com */
 /* notification container */
 #jquery-notifications {

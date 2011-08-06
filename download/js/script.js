@@ -1,6 +1,6 @@
 var
   buttons = {
-    build: $('#button').extend({
+    build: $('#build').extend({
       enable: function() { this.removeAttr('disabled'); return this; },
       disable: function() { this.attr('disabled', 'disabled'); return this; }
     }).disable(),
@@ -94,7 +94,7 @@ function buildUI(services) {
     })()
   );
 
-  Downloadify.create('button-bar', {
+  Downloadify.create('download', {
     filename: function(){
       return 'jquery.lifestream.custom.min.js';
     },
@@ -107,8 +107,8 @@ function buildUI(services) {
     transparent: false,
     swf: 'js/downloadify.swf',
     downloadImage: 'img/download.png',
-    width: 100, //123, //144, //100,
-    height: 30, //35, //41, //30,
+    width: 100,
+    height: 30,
     append: true
   });
   
@@ -116,11 +116,13 @@ function buildUI(services) {
   // Use the zero timer hack because in some browsers
   // (IE<9 if I remember) theobject isn't readily available
   setTimeout(function() {
-    buttons.download = $('#button-bar > object').extend({
-      enable: function() { this.css({visibility: 'visible'}); return this; },
-      disable: function() { this.css({visibility: 'hidden'}); return this; },
+    buttons.download = $('#download object').extend({
+      toggle: function() {
+        $('#build').toggle();
+        $('#download').toggle();
+        return this;
+      }
     });
-    buttons.download.disable();
   }, 0);
   
   $.n('Loading UglifyJS...');
@@ -152,7 +154,7 @@ function build() {
 function onBuildCompleted(minifiedScript) {
   $.n('Build completed');
   builtScript = minifiedScript;
-  buttons.download.enable();
+  buttons.download.toggle();
 }
 
 function onBuildFailure() {
@@ -164,7 +166,7 @@ function onBuildFailure() {
 
 function onDownloadComplete() { 
   checkboxes.enable();
-  buttons.download.disable();
+  buttons.download.toggle();
   buttons.build.enable();
 }
 
